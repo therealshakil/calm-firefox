@@ -1,0 +1,115 @@
+{
+  "manifest_version": 2,
+  "name": "Calm Firefox",
+  "version": "0.1.0",
+  "description": "A calm, low-arousal skin for Firefox — monochrome ink-on-paper with one clay accent, light and dark. Part of the calm suite.",
+  "author": "Shakil Clark",
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "calm-firefox@shakilclark"
+    }
+  },
+
+  "theme": {
+    "colors": {
+      "frame": "#F7F4EC",
+      "frame_inactive": "#F7F4EC",
+
+      "toolbar": "#F7F4EC",
+      "toolbar_text": "#26231E",
+      "bookmark_text": "#26231E",
+      "icons": "#26231E",
+      "icons_attention": "#B5612F",
+
+      "toolbar_field": "#FCFAF4",
+      "toolbar_field_text": "#26231E",
+      "toolbar_field_border": "#E4DCCB",
+      "toolbar_field_focus": "#FCFAF4",
+      "toolbar_field_text_focus": "#26231E",
+      "toolbar_field_border_focus": "#6B6456",
+      "toolbar_field_highlight": "#E7E1D2",
+      "toolbar_field_highlight_text": "#26231E",
+
+      "tab_background_text": "#6B6456",
+      "tab_text": "#26231E",
+      "tab_selected": "#FCFAF4",
+      "tab_line": "#B5612F",
+      "tab_loading": "#B5612F",
+
+      "toolbar_top_separator": "#E4DCCB",
+      "toolbar_bottom_separator": "#E4DCCB",
+      "toolbar_vertical_separator": "#E4DCCB",
+
+      "button_background_hover": "#E7E1D2",
+      "button_background_active": "#E4DCCB",
+
+      "popup": "#FCFAF4",
+      "popup_text": "#26231E",
+      "popup_border": "#E4DCCB",
+      "popup_highlight": "#E7E1D2",
+      "popup_highlight_text": "#26231E",
+
+      "sidebar": "#F7F4EC",
+      "sidebar_text": "#26231E",
+      "sidebar_border": "#E4DCCB",
+      "sidebar_highlight": "#E7E1D2",
+      "sidebar_highlight_text": "#26231E",
+
+      "ntp_background": "#F7F4EC",
+      "ntp_card_background": "#FCFAF4",
+      "ntp_text": "#26231E"
+    }
+  },
+
+  "dark_theme": {
+    "colors": {
+      "frame": "#1B1814",
+      "frame_inactive": "#1B1814",
+
+      "toolbar": "#1B1814",
+      "toolbar_text": "#ECE6D8",
+      "bookmark_text": "#ECE6D8",
+      "icons": "#ECE6D8",
+      "icons_attention": "#EDB489",
+
+      "toolbar_field": "#221E19",
+      "toolbar_field_text": "#ECE6D8",
+      "toolbar_field_border": "#2C2820",
+      "toolbar_field_focus": "#221E19",
+      "toolbar_field_text_focus": "#ECE6D8",
+      "toolbar_field_border_focus": "#9A9080",
+      "toolbar_field_highlight": "#2E2A23",
+      "toolbar_field_highlight_text": "#ECE6D8",
+
+      "tab_background_text": "#9A9080",
+      "tab_text": "#ECE6D8",
+      "tab_selected": "#221E19",
+      "tab_line": "#EDB489",
+      "tab_loading": "#EDB489",
+
+      "toolbar_top_separator": "#2C2820",
+      "toolbar_bottom_separator": "#2C2820",
+      "toolbar_vertical_separator": "#2C2820",
+
+      "button_background_hover": "#2E2A23",
+      "button_background_active": "#2C2820",
+
+      "popup": "#221E19",
+      "popup_text": "#ECE6D8",
+      "popup_border": "#2C2820",
+      "popup_highlight": "#2E2A23",
+      "popup_highlight_text": "#ECE6D8",
+
+      "sidebar": "#1B1814",
+      "sidebar_text": "#ECE6D8",
+      "sidebar_border": "#2C2820",
+      "sidebar_highlight": "#2E2A23",
+      "sidebar_highlight_text": "#ECE6D8",
+
+      "ntp_background": "#1B1814",
+      "ntp_card_background": "#221E19",
+      "ntp_text": "#ECE6D8"
+    }
+  }
+}

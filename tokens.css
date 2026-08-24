@@ -1,0 +1,48 @@
+/* calm — design tokens.
+   The suite palette is monochrome ink-on-paper; the single clay accent is the only colour (Article VI,
+   never alarm-red, for the rare time-bound thing). Build on these variables — never hard-code colour.
+   Type: these tokens only NAME the faces; load them yourself (Google Fonts or self-host).
+   Light and dark are both defined: follows the OS, or force with <html data-theme="light|dark">. */
+
+:root {
+  color-scheme: light dark;
+
+  /* paper — light */
+  --calm-bg: #F7F4EC;       /* warm off-white, reads as paper not screen */
+  --calm-fg: #26231E;       /* near-black ink */
+  --calm-dim: #6B6456;      /* muted ink — captions, labels */
+  --calm-line: #E4DCCB;     /* hairline rule */
+  --calm-card: #FCFAF4;     /* raised surface */
+  --calm-sel: #E7E1D2;      /* text selection */
+  --calm-accent: #B5612F;   /* the one clay accent — time-bound only, never alarm-red */
+
+  /* type — names only; load the faces in your app */
+  --calm-font-body: 'Atkinson Hyperlegible', system-ui, sans-serif;
+  --calm-font-serif: 'Yrsa', Georgia, serif;
+  --calm-font-hand: 'Shantell Sans', 'Comic Sans MS', cursive;
+  --calm-font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+/* ink — dark (follows the OS) */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --calm-bg: #1B1814;     /* soft off-black */
+    --calm-fg: #ECE6D8;     /* bone-white ink */
+    --calm-dim: #9A9080;
+    --calm-line: #2C2820;
+    --calm-card: #221E19;
+    --calm-sel: #2E2A23;
+    --calm-accent: #EDB489; /* clay, lifted for the dark ground */
+  }
+}
+
+/* ink — dark (forced) */
+[data-theme="dark"] {
+  --calm-bg: #1B1814;
+  --calm-fg: #ECE6D8;
+  --calm-dim: #9A9080;
+  --calm-line: #2C2820;
+  --calm-card: #221E19;
+  --calm-sel: #2E2A23;
+  --calm-accent: #EDB489;
+}

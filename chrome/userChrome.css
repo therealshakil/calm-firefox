@@ -1,0 +1,78 @@
+/* calm-firefox — declutter layer (spec 002).
+   The subtract-and-soften half of calm, for what the static theme can't reach: chrome typography, hiding
+   clutter, room to breathe, stilling the last motion. Colour is the static theme's job (spec 001), not
+   this file.
+
+   ENABLE:  about:config → toolkit.legacyUserProfileCustomizations.stylesheets = true   (then restart)
+   INSTALL: copy this file to <profile>/chrome/userChrome.css   (see README)
+   FONT:    install "Atkinson Hyperlegible" on the OS so the chrome can use it (see README)
+
+   VERIFIED AGAINST: Firefox ESR <FILL AT VERIFY> — selectors are Firefox-internal and unsupported; a
+   stale one fails SAFE (it just stops matching). The keeper (spec 003) re-pins these on ESR updates.
+
+   Blocks are small and named on purpose: a broken selector is isolated, and the keeper can patch one
+   block without touching the rest. */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* ── 1. Typography — Atkinson Hyperlegible across the chrome ──────────────────
+   The ND/legibility win. Finicky: chrome has many regions; if one looks wrong,
+   it's likely a region not covered here — add it rather than broadening blindly.
+   Requires the face installed on the OS (CSS in chrome can't reliably load web fonts). */
+#main-window,
+#navigator-toolbox,
+#nav-bar,
+#tabbrowser-tabs,
+.tabbrowser-tab,
+.tab-label,
+#urlbar,
+.urlbarView,
+#PanelUI-menu-button,
+menupopup,
+menu,
+menuitem,
+panel {
+  font-family: "Atkinson Hyperlegible", system-ui, sans-serif !important;
+}
+
+/* ── 2. Hide clutter (default on) ─────────────────────────────────────────────
+   Pocket and the per-tab close button. Subtract by default. */
+#save-to-pocket-button {
+  display: none !important;
+}
+.tabbrowser-tab .tab-close-button {
+  display: none !important;
+}
+
+/* ── 2b. Hide clutter (opt-in) ────────────────────────────────────────────────
+   Uncomment any you don't use. Left off by default — these are useful to some. */
+/* #unified-extensions-button { display: none !important; } */   /* extensions puzzle piece */
+/* #fxa-toolbar-menu-button   { display: none !important; } */   /* account / avatar */
+/* #firefox-view-button       { display: none !important; } */   /* Firefox View */
+
+/* ── 3. Room to breathe — minimal chrome, gentle roominess ────────────────────
+   Soften separators to a calm hairline; a little vertical air in the URL bar and
+   tabs. Kept light on purpose — we iterate. (Hairline colour leans on the theme;
+   --calm-line is #E4DCCB light / #2C2820 dark.) */
+#urlbar,
+#urlbar-input {
+  padding-block: 3px !important;
+}
+.tabbrowser-tab {
+  min-height: 34px !important;
+}
+.titlebar-spacer,
+#PanelUI-button > toolbarseparator,
+.toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker {
+  /* trim small visual noise; harmless if a selector goes stale */
+  opacity: 0.6 !important;
+}
+
+/* ── 4. Still motion (belt-and-braces) ────────────────────────────────────────
+   ui.prefersReducedMotion=1 (calm-switches.md) already stills most chrome motion;
+   this just makes sure tab transitions don't sneak back in. */
+.tabbrowser-tab,
+.tab-content,
+#tabbrowser-tabs {
+  transition: none !important;
+}
