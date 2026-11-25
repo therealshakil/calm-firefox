@@ -54,13 +54,8 @@ panel {
    Soften separators to a calm hairline; a little vertical air in the URL bar and
    tabs. Kept light on purpose — we iterate. (Hairline colour leans on the theme;
    --calm-line is #E4DCCB light / #2C2820 dark.) */
-#urlbar,
-#urlbar-input {
-  padding-block: 3px !important;
-}
-.tabbrowser-tab {
-  min-height: 34px !important;
-}
+/* Compact by preference (2026-11-25): Shakil liked Brave's tight two-row chrome, so the extra air
+   comes out and browser.uidensity = 1 (compact) sets the heights. Calm here is less chrome, not more room. */
 .titlebar-spacer,
 #PanelUI-button > toolbarseparator,
 .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker {

@@ -1,0 +1,48 @@
+/* calm-firefox — the new tab, in ink and paper.
+   Firefox's own pages (about:newtab, about:home) don't follow the GTK theme, so this recolours them with
+   calm's tokens (tokens.css): warm paper / near-black ink, soft off-black / bone-white ink, no purple.
+   Needs toolkit.legacyUserProfileCustomizations.stylesheets = true. Variable names verified on Firefox 161;
+   a stale one fails safe (it just stops applying). */
+
+@-moz-document url("about:newtab"), url("about:home"), url("about:privatebrowsing") {
+  :root {
+    --calm-bg: #F7F4EC; --calm-fg: #26231E; --calm-dim: #6B6456;
+    --calm-line: #E4DCCB; --calm-card: #FCFAF4; --calm-sel: #E7E1D2;
+
+    --newtab-background-color: var(--calm-bg) !important;
+    --newtab-background-color-secondary: var(--calm-card) !important;
+    --newtab-text-primary-color: var(--calm-fg) !important;
+    --newtab-text-secondary-color: var(--calm-dim) !important;
+    --newtab-primary-action-background: var(--calm-fg) !important;
+    --newtab-element-hover-color: var(--calm-sel) !important;
+    --newtab-border-color: var(--calm-line) !important;
+    --background-color-canvas: var(--calm-bg) !important;
+    --background-color-box: var(--calm-card) !important;
+    --text-color: var(--calm-fg) !important;
+    --text-color-deemphasized: var(--calm-dim) !important;
+    --border-color: var(--calm-line) !important;
+    --color-accent-primary: var(--calm-fg) !important;
+    --color-accent-primary-hover: var(--calm-dim) !important;
+    --button-text-color-primary: var(--calm-card) !important;
+    --link-color: var(--calm-fg) !important;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --calm-bg: #1B1814; --calm-fg: #ECE6D8; --calm-dim: #9A9080;
+      --calm-line: #2C2820; --calm-card: #221E19; --calm-sel: #2E2A23;
+    }
+  }
+
+  body {
+    background-color: var(--calm-bg) !important;
+    font-family: "Atkinson Hyperlegible", system-ui, sans-serif !important;
+  }
+
+  /* Just the search box: no logo; the customise pencil fades back until you reach for it. */
+  .logo-and-wordmark-wrapper,
+  .logo-and-wordmark { display: none !important; }
+  .personalize-button { opacity: 0.35 !important; }
+  .personalize-button:hover,
+  .personalize-button:focus-visible { opacity: 1 !important; }
+}
