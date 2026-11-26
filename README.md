@@ -29,8 +29,10 @@ reduced-motion pass the theme can't do on its own. Recommends, never executes.
 
 1. **Install the font** so the chrome can use it: get [Atkinson Hyperlegible](https://fonts.google.com/specimen/Atkinson+Hyperlegible)
    and install it on macOS (Font Book, or `brew install --cask font-atkinson-hyperlegible`).
-2. **Enable + the declutter prefs:** the "Declutter" rows in [`docs/calm-switches.md`](./docs/calm-switches.md)
-   (it flips `toolkit.legacyUserProfileCustomizations.stylesheets` on).
+2. **Enable + the declutter prefs:** link or copy [`user.js`](./user.js) to `<your-profile>/user.js`.
+   It flips `toolkit.legacyUserProfileCustomizations.stylesheets` on and holds every calm pref
+   (still motion, no AI, no nags, a quiet new tab, compact chrome). Prefer to flip them by hand?
+   The same switches are in [`docs/calm-switches.md`](./docs/calm-switches.md).
 3. **Copy the stylesheet** into your profile: put [`chrome/userChrome.css`](./chrome/userChrome.css) at
    `~/Library/Application Support/Firefox/Profiles/<your-profile>/chrome/userChrome.css`.
 4. **Restart Firefox** (userChrome only applies on restart). Opt-in hides (extensions button, account
@@ -40,6 +42,9 @@ reduced-motion pass the theme can't do on its own. Recommends, never executes.
 > stops applying). Layer 3 (the keeper) will re-pin them automatically.
 
 ## Use
+
+On Linux, [calm-desktop](https://github.com/therealshakil/calm-desktop) links all of this into the
+profile for you.
 
 There's nothing to operate — it's a skin. Install, and Firefox is calm. It follows your OS light/dark
 automatically. The one clay accent appears only on genuinely live things (a loading tab), never as
