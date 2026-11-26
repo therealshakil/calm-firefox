@@ -3,7 +3,7 @@
 A calm, low-arousal skin for Firefox — monochrome ink-on-paper with one clay accent, light and dark. The
 calm suite's identity, laid over the one app you can't avoid all day.
 
-Part of the [calm suite](https://github.com/shakilclark/calm). Built in layers:
+Part of the [calm suite](https://github.com/therealshakil/calm). Built in layers:
 
 - **Layer 1 — core** (shipped): a signed static theme + a one-time `about:config` pass.
 - **Layer 2 — declutter** (built; pin against **Firefox ESR**): a `userChrome.css` that adds chrome
@@ -52,4 +52,5 @@ decoration or alarm.
 
 ## Licence
 
-Part of the calm suite — see [CONSTITUTION.md](https://github.com/shakilclark/calm/blob/main/CONSTITUTION.md).
+MIT — see [`LICENSE`](./LICENSE).
+Part of the calm suite — see [CONSTITUTION.md](https://github.com/therealshakil/calm/blob/main/CONSTITUTION.md).

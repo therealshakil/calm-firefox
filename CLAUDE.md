@@ -4,7 +4,7 @@ calm-firefox inherits calm from the suite; it does not restate the rules.
 
 ## Governing law lives elsewhere
 
-- **github.com/shakilclark/calm** — the source of calm:
+- **github.com/therealshakil/calm** — the source of calm:
   - CONSTITUTION.md — the ten Articles + banned patterns. Supreme.
   - docs/identity.md — the look: monochrome ink on paper + one clay accent, the locked typefaces, almost no motion.
   - docs/calm-language.md — the voice.

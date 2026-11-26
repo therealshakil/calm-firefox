@@ -48,7 +48,7 @@ scope question back to the person.
   system didn't paper over it — it gave me the principle to *name* the tension and surface it rather than
   quietly pick. A DS that makes its own trade-offs visible is doing something most don't.
 
-Late in the day, picked up calm's now-locked [`cli-conventions.md`](https://github.com/shakilclark/calm/blob/main/docs/specs/cli-conventions.md)
+Late in the day, picked up calm's now-locked [`cli-conventions.md`](https://github.com/therealshakil/calm/blob/main/docs/specs/cli-conventions.md)
 (suite-wide, 2026-06-25) and wired it into our pointer. Another article beat: the DS governs even the
 *command line* — clickable `file://` links over bare paths, "minimal yes" (every confirmation is an
 attention tax), one operation per command, no un-analysable shell that forces a permission prompt. The
