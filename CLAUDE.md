@@ -1,6 +1,7 @@
 # Working calm — calm-firefox
 
-calm-firefox inherits calm from the suite; it does not restate the rules.
+calm-firefox opts in to full calm (calm's Constitution, Amendment 7): it takes calm as law and does
+not restate the rules. Scoped exceptions: none.
 
 ## Governing law lives elsewhere
 
