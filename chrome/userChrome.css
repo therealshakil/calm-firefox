@@ -78,3 +78,27 @@ panel {
 #tabbrowser-tabs {
   transition: none !important;
 }
+
+/* ── 5. Quiet container colours ───────────────────────────────────────────────
+   The one colour job the static theme can't reach. Container hues stay, so you
+   can still tell Work from Personal, but as soft ink tints on the paper rather
+   than bright signal colours. Never clay: clay is time-bound only. */
+.identity-color-blue      { --identity-tab-color: #5E6E7C !important; --identity-icon-color: #5E6E7C !important; }
+.identity-color-turquoise { --identity-tab-color: #5E7772 !important; --identity-icon-color: #5E7772 !important; }
+.identity-color-green     { --identity-tab-color: #6B7457 !important; --identity-icon-color: #6B7457 !important; }
+.identity-color-yellow    { --identity-tab-color: #857546 !important; --identity-icon-color: #857546 !important; }
+.identity-color-orange    { --identity-tab-color: #86684E !important; --identity-icon-color: #86684E !important; }
+.identity-color-red       { --identity-tab-color: #7E5A52 !important; --identity-icon-color: #7E5A52 !important; }
+.identity-color-pink      { --identity-tab-color: #7C5E6A !important; --identity-icon-color: #7C5E6A !important; }
+.identity-color-purple    { --identity-tab-color: #6A6078 !important; --identity-icon-color: #6A6078 !important; }
+
+@media (prefers-color-scheme: dark) {
+  .identity-color-blue      { --identity-tab-color: #8A9AA8 !important; --identity-icon-color: #8A9AA8 !important; }
+  .identity-color-turquoise { --identity-tab-color: #8AA39E !important; --identity-icon-color: #8AA39E !important; }
+  .identity-color-green     { --identity-tab-color: #9AA383 !important; --identity-icon-color: #9AA383 !important; }
+  .identity-color-yellow    { --identity-tab-color: #B8A877 !important; --identity-icon-color: #B8A877 !important; }
+  .identity-color-orange    { --identity-tab-color: #B89A7E !important; --identity-icon-color: #B89A7E !important; }
+  .identity-color-red       { --identity-tab-color: #B08A82 !important; --identity-icon-color: #B08A82 !important; }
+  .identity-color-pink      { --identity-tab-color: #AE909C !important; --identity-icon-color: #AE909C !important; }
+  .identity-color-purple    { --identity-tab-color: #9A90A8 !important; --identity-icon-color: #9A90A8 !important; }
+}
