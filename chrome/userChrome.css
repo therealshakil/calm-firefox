@@ -36,11 +36,18 @@ panel {
 }
 
 /* ── 2. Hide clutter (default on) ─────────────────────────────────────────────
-   Pocket and the per-tab close button. Subtract by default. */
+   Pocket. Subtract by default. */
 #save-to-pocket-button {
   display: none !important;
 }
+
+/* ── 2a. Quiet close button ───────────────────────────────────────────────────
+   Hiding it outright (the first cut) went too far: a tab needs a way to close by
+   mouse. It shows on the current tab and on hover, and rests hidden elsewhere. */
 .tabbrowser-tab .tab-close-button {
+  opacity: 0.6 !important;
+}
+.tabbrowser-tab:not([selected]):not(:hover) .tab-close-button {
   display: none !important;
 }
 
